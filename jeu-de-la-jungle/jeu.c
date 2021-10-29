@@ -90,7 +90,7 @@ int main() {
 	rat ratbleu, ratrouge;
 	ratrouge.x = 2;
 	ratrouge.y = 6;
-	ratbleu.x = ;
+	//ratbleu.x = ;
 	chat chatbleu, chatrouge;
 	loup loupbleu, louprouge;
 	chien chienbleu, chienrouge;
