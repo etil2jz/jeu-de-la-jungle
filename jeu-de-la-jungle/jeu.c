@@ -76,21 +76,9 @@ typedef struct elephant {
 
 // tableau 15 largeur 19 hauteur ?
 
-void initPlateau() {
 
-	for (int i = 0; i < 9; i++) {
-		printf_s("---------------------------------\n");
-		for (int j = 0; j < 16; j++) {
-
-		}
-	}
-}
-
-int main() {
+void initPions() {
 	rat ratbleu, ratrouge;
-	ratrouge.x = 2;
-	ratrouge.y = 6;
-	//ratbleu.x = ;
 	chat chatbleu, chatrouge;
 	loup loupbleu, louprouge;
 	chien chienbleu, chienrouge;
@@ -98,7 +86,38 @@ int main() {
 	tigre tigrebleu, tigrerouge;
 	lion lionbleu, lionrouge;
 	elephant elephantbleu, elephantrouge;
+	ratbleu.x = 7;
+	ratbleu.y = 3;
+	ratbleu.force = 1;
+	ratbleu.etat = 1;
+	ratrouge.x = 1;
+	ratrouge.y = 7;
+	ratrouge.force = 1;
+	ratrouge.etat = 1;
+
+}
+
+int main() {
+	int joueur1 = 0, joueur2 = 0, choixEquipe;
 	system("title Jeu de la jungle");
 	regles();
-	initPlateau();
+	printf_s("Joueur 1, choisissez votre equipe.\n\nTapez 1 pour les bleus, 2 pour les rouges :\n");
+	scanf_s("%i", &choixEquipe);
+	switch(choixEquipe){
+	case 1: joueur1 = 1;
+		joueur2 = 2;
+		break;
+	case 2: joueur1 = 2;
+		joueur2 = 1;
+		break;
+	default: printf_s("\nErreur de saisie\n");
+	}
+	if (joueur1 == 1) {
+		printf_s("\nLe joueur 1 est dans l'equipe bleue\nLe joueur 2 est dans l'equipe rouge\n");
+	}
+	else {
+		printf_s("\nLe joueur 1 est dans l'equipe rouge\nLe joueur 2 est dans l'equipe bleue\n");
+	}
+	//initPions();
+	//initPlateau();
 }
