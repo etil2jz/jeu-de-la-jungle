@@ -1,0 +1,18 @@
+﻿  jeu.c
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(77,9): warning C4101: 'j' : variable locale non référencée
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(77,6): warning C4101: 'i' : variable locale non référencée
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(182,25): warning C4101: 'elephantrouge' : variable locale non référencée
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(181,17): warning C4101: 'lionrouge' : variable locale non référencée
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(179,25): warning C4101: 'panthererouge' : variable locale non référencée
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(178,19): warning C4101: 'chienrouge' : variable locale non référencée
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(176,17): warning C4101: 'chatrouge' : variable locale non référencée
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(177,17): warning C4101: 'louprouge' : variable locale non référencée
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(182,11): warning C4101: 'elephantbleu' : variable locale non référencée
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(180,19): warning C4101: 'tigrerouge' : variable locale non référencée
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(180,8): warning C4101: 'tigrebleu' : variable locale non référencée
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(177,7): warning C4101: 'loupbleu' : variable locale non référencée
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(178,8): warning C4101: 'chienbleu' : variable locale non référencée
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(181,7): warning C4101: 'lionbleu' : variable locale non référencée
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(179,11): warning C4101: 'pantherebleu' : variable locale non référencée
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(176,7): warning C4101: 'chatbleu' : variable locale non référencée
+  jeu-de-la-jungle.vcxproj -> C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\x64\Debug\jeu-de-la-jungle.exe

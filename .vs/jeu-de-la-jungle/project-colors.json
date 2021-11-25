@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e693f7f1-bcd5-40ff-9dea-77fe96eb6226": {
+      "ProjectGuid": "e693f7f1-bcd5-40ff-9dea-77fe96eb6226",
+      "DisplayName": "jeu-de-la-jungle",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
