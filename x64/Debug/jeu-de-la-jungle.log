@@ -1,18 +1,20 @@
 ﻿  jeu.c
-C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(77,9): warning C4101: 'j' : variable locale non référencée
-C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(77,6): warning C4101: 'i' : variable locale non référencée
-C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(182,25): warning C4101: 'elephantrouge' : variable locale non référencée
-C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(181,17): warning C4101: 'lionrouge' : variable locale non référencée
-C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(179,25): warning C4101: 'panthererouge' : variable locale non référencée
-C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(178,19): warning C4101: 'chienrouge' : variable locale non référencée
-C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(176,17): warning C4101: 'chatrouge' : variable locale non référencée
-C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(177,17): warning C4101: 'louprouge' : variable locale non référencée
-C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(182,11): warning C4101: 'elephantbleu' : variable locale non référencée
-C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(180,19): warning C4101: 'tigrerouge' : variable locale non référencée
-C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(180,8): warning C4101: 'tigrebleu' : variable locale non référencée
-C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(177,7): warning C4101: 'loupbleu' : variable locale non référencée
-C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(178,8): warning C4101: 'chienbleu' : variable locale non référencée
-C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(181,7): warning C4101: 'lionbleu' : variable locale non référencée
-C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(179,11): warning C4101: 'pantherebleu' : variable locale non référencée
-C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(176,7): warning C4101: 'chatbleu' : variable locale non référencée
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(85,9): warning C4101: 'j' : variable locale non référencée
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(85,6): warning C4101: 'i' : variable locale non référencée
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(195,19): warning C4047: '=' : les niveaux d'indirection de 'char' et de 'char [2]' sont différents
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(200,20): warning C4047: '=' : les niveaux d'indirection de 'char' et de 'char [2]' sont différents
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(205,20): warning C4047: '=' : les niveaux d'indirection de 'char' et de 'char [2]' sont différents
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(210,21): warning C4047: '=' : les niveaux d'indirection de 'char' et de 'char [2]' sont différents
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(215,20): warning C4047: '=' : les niveaux d'indirection de 'char' et de 'char [2]' sont différents
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(220,21): warning C4047: '=' : les niveaux d'indirection de 'char' et de 'char [2]' sont différents
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(225,21): warning C4047: '=' : les niveaux d'indirection de 'char' et de 'char [2]' sont différents
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(230,22): warning C4047: '=' : les niveaux d'indirection de 'char' et de 'char [2]' sont différents
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(235,24): warning C4047: '=' : les niveaux d'indirection de 'char' et de 'char [2]' sont différents
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(240,25): warning C4047: '=' : les niveaux d'indirection de 'char' et de 'char [2]' sont différents
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(245,21): warning C4047: '=' : les niveaux d'indirection de 'char' et de 'char [2]' sont différents
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(250,22): warning C4047: '=' : les niveaux d'indirection de 'char' et de 'char [2]' sont différents
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(255,20): warning C4047: '=' : les niveaux d'indirection de 'char' et de 'char [2]' sont différents
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(260,21): warning C4047: '=' : les niveaux d'indirection de 'char' et de 'char [2]' sont différents
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(265,24): warning C4047: '=' : les niveaux d'indirection de 'char' et de 'char [2]' sont différents
+C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\jeu.c(270,25): warning C4047: '=' : les niveaux d'indirection de 'char' et de 'char [2]' sont différents
   jeu-de-la-jungle.vcxproj -> C:\Users\Arthur\Documents\Programmation ESIEE-Amiens\jeu-de-la-jungle\x64\Debug\jeu-de-la-jungle.exe

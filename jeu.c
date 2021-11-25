@@ -7,9 +7,9 @@ Suivant l’avancement du projet, le programme permettra :
 	- de jouer contre l’ordinateur grâce à l’implantation d’une intelligence artificielle
 	- de jouer contre un autre logiciel (une intelligence artificielle contre l’autre)
 La réalisation en mode graphique apportera un bonus (maximum 2 points), mais n’est pas obligatoire.
-*/
 
-/*
+
+
 Gérer les commandes de l'utilisateur :
 	- Placer les pions
 	- Contrôler le déroulement de la partie (règles...)
@@ -43,34 +43,42 @@ void regles() {
 
 typedef struct rat {
 	int x, y, force, etat;
+	char nom;
 }rat;
 
 typedef struct chat {
 	int x, y, force, etat;
+	char nom;
 }chat;
 
 typedef struct loup {
 	int x, y, force, etat;
+	char nom;
 }loup;
 
 typedef struct chien {
 	int x, y, force, etat;
+	char nom;
 }chien;
 
 typedef struct panthere {
 	int x, y, force, etat;
+	char nom;
 }panthere;
 
 typedef struct tigre {
 	int x, y, force, etat;
+	char nom;
 }tigre;
 
 typedef struct lion {
 	int x, y, force, etat;
+	char nom;
 }lion;
 
 typedef struct elephant {
 	int x, y, force, etat;
+	char nom;
 }elephant;
 
 void initPlateau(char plateau[][15]) {
@@ -123,29 +131,29 @@ void initPlateau(char plateau[][15]) {
 	plateau[11][11] = 0xb2;
 	plateau[11][13] = ' ';
 
-	plateau[13][1] = 'E';
+	plateau[13][1] = 'e';
 	plateau[13][3] = ' ';
-	plateau[13][5] = 'O';
+	plateau[13][5] = 'o';
 	plateau[13][7] = ' ';
-	plateau[13][9] = 'P';
+	plateau[13][9] = 'p';
 	plateau[13][11] = ' ';
-	plateau[13][13] = 'R';
+	plateau[13][13] = 'r';
 
 	plateau[15][1] = ' ';
-	plateau[15][3] = 'H';
+	plateau[15][3] = 'h';
 	plateau[15][5] = ' ';
 	plateau[15][7] = ' ';
 	plateau[15][9] = ' ';
-	plateau[15][11] = 'C';
+	plateau[15][11] = 'c';
 	plateau[15][13] = ' ';
 
-	plateau[17][1] = 'T';
+	plateau[17][1] = 't';
 	plateau[17][3] = ' ';
 	plateau[17][5] = ' ';
 	plateau[17][7] = ' ';
 	plateau[17][9] = ' ';
 	plateau[17][11] = ' ';
-	plateau[17][13] = 'L';
+	plateau[17][13] = 'l';
 }
 
 void affichagePlateau(char plateau[][15]) {
@@ -180,15 +188,86 @@ void initPions() {
 	tigre tigrebleu, tigrerouge;
 	lion lionbleu, lionrouge;
 	elephant elephantbleu, elephantrouge;
-	ratbleu.x = 7;
-	ratbleu.y = 3;
+	ratbleu.y = 13;
+	ratbleu.x = 13;
 	ratbleu.force = 1;
 	ratbleu.etat = 1;
+	ratbleu.nom = "r";
+	ratrouge.y = 5;
 	ratrouge.x = 1;
-	ratrouge.y = 7;
 	ratrouge.force = 1;
 	ratrouge.etat = 1;
-
+	ratrouge.nom = "R";
+	chatbleu.y = 15;
+	chatbleu.x = 3;
+	chatbleu.force = 2;
+	chatbleu.etat = 1;
+	chatbleu.nom = "h";
+	chatrouge.y = 3;
+	chatrouge.x = 11;
+	chatrouge.force = 2;
+	chatrouge.etat = 1;
+	chatrouge.nom = "H";
+	loupbleu.y = 13;
+	loupbleu.x = 5;
+	loupbleu.force = 3;
+	loupbleu.etat = 1;
+	loupbleu.nom = "o";
+	louprouge.y = 5;
+	louprouge.x = 9;
+	louprouge.force = 3;
+	louprouge.etat = 1;
+	louprouge.nom = "O";
+	chienbleu.y = 15;
+	chienbleu.x = 11;
+	chienbleu.force = 4;
+	chienbleu.etat = 1;
+	chienbleu.nom = "c";
+	chienrouge.y = 3;
+	chienrouge.x = 3;
+	chienrouge.force = 4;
+	chienrouge.etat = 1;
+	chienrouge.nom = "C";
+	pantherebleu.y = 13;
+	pantherebleu.x = 9;
+	pantherebleu.force = 5;
+	pantherebleu.etat = 1;
+	pantherebleu.nom = "p";
+	panthererouge.y = 5;
+	panthererouge.x = 5;
+	panthererouge.force = 5;
+	panthererouge.etat = 1;
+	panthererouge.nom = "P";
+	tigrebleu.y = 17;
+	tigrebleu.x = 1;
+	tigrebleu.force = 6;
+	tigrebleu.etat = 1;
+	tigrebleu.nom = "t";
+	tigrerouge.y = 1;
+	tigrerouge.x = 13;
+	tigrerouge.force = 6;
+	tigrerouge.etat = 1;
+	tigrerouge.nom = "T";
+	lionbleu.y = 17;
+	lionbleu.x = 13;
+	lionbleu.force = 7;
+	lionbleu.etat = 1;
+	lionbleu.nom = "l";
+	lionrouge.y = 1;
+	lionrouge.x = 1;
+	lionrouge.force = 7;
+	lionrouge.etat = 1;
+	lionrouge.nom = "L";
+	elephantbleu.y = 13;
+	elephantbleu.x = 1;
+	elephantbleu.force = 8;
+	elephantbleu.etat = 1;
+	elephantbleu.nom = "e";
+	elephantrouge.y = 5;
+	elephantrouge.x = 13;
+	elephantrouge.force = 8;
+	elephantrouge.etat = 1;
+	elephantrouge.nom = "E";
 }
 
 int initEquipes() {
@@ -214,7 +293,7 @@ int main() {
 	}
 	Sleep(1000);
 	system("cls");
-	//initPions();
+	initPions();
 	initPlateau(plateau);
 	affichagePlateau(plateau);
 }
