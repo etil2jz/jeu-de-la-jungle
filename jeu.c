@@ -983,6 +983,32 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 	} while (etatBleu == 1 && etatRouge == 1);
 }
 
+//void sauvegarder(char plateau[][15]) {
+//	int n;
+//	FILE* ecriture;
+//	fopen("save.txt", "w");
+//	ecriture = fopen("save.txt", "a");
+//	for (int i = 0; i < 19; i++) {
+//		for (int j = 0; j < 14; j++) {
+//			n = plateau[i][j];
+//			fputc(n, ecriture);
+//		}
+//	}
+//	fclose(ecriture);
+//}
+//
+//void charger(char plateau[][15]) {
+//	int n;
+//	FILE* ouverture;
+//	ouverture = fopen("save.txt", "r");
+//	for (int i = 0; i < 19; i++) {
+//		for (int j = 0; j < 14; j++) {
+//			n = fgetc(ouverture);
+//			plateau[i][j] = n;
+//		}
+//	}
+//}
+
 int main() {
 	int joueur1 = 0, joueur2 = 0, vraiX = 0, vraiY = 0;
 	char plateau[19][15];

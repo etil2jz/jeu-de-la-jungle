@@ -30,7 +30,7 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\bigrat_auto_x1 (1).ico">
+    <Image Include="icon.ico">
       <Filter>Fichiers de ressources</Filter>
     </Image>
   </ItemGroup>
