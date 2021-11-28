@@ -1,3 +1,0 @@
-- Printf les règles du jeu à chaque démarrage
-- Permettre aux utilisateurs d'entrer leur nom
-- 
