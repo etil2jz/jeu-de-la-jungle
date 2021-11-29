@@ -242,7 +242,8 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				scanf_s("%i", &repPion);
 			} while (repPion < 1 || repPion > 8);
 			switch (repPion) {
-			case 1: printf_s("\nLes coordonnees de R sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", ratbleu.x, ratbleu.y);
+			case 1: if (ratbleu.etat == 1) {
+				printf_s("\nLes coordonnees de R sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", ratbleu.x, ratbleu.y);
 				scanf_s("%i%i", &tempX, &tempY);
 				ratbleu.x = tempX;
 				ratbleu.y = tempY;
@@ -253,8 +254,13 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				plateau[tempY][tempX] = ratbleu.nom;
 				ratbleu.oldVraiY = tempY;
 				ratbleu.oldVraiX = tempX;
+			}
+				  else {
+				printf_s("\nCette piece a ete prise par l'equipe rouge...\n");
+			}
 				break;
-			case 2: printf_s("\nLes coordonnees de H sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", chatbleu.x, chatbleu.y);
+			case 2: if (chatbleu.etat == 1) {
+				printf_s("\nLes coordonnees de H sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", chatbleu.x, chatbleu.y);
 				scanf_s("%i%i", &tempX, &tempY);
 				chatbleu.x = tempX;
 				chatbleu.y = tempY;
@@ -265,8 +271,13 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				plateau[tempY][tempX] = chatbleu.nom;
 				chatbleu.oldVraiY = tempY;
 				chatbleu.oldVraiX = tempX;
+			}
+				  else {
+				printf_s("\nCette piece a ete prise par l'equipe rouge...\n");
+			}
 				break;
-			case 3: printf_s("\nLes coordonnees de O sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", loupbleu.x, loupbleu.y);
+			case 3: if (loupbleu.etat == 1) {
+				printf_s("\nLes coordonnees de O sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", loupbleu.x, loupbleu.y);
 				scanf_s("%i%i", &tempX, &tempY);
 				loupbleu.x = tempX;
 				loupbleu.y = tempY;
@@ -277,8 +288,13 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				plateau[tempY][tempX] = loupbleu.nom;
 				loupbleu.oldVraiY = tempY;
 				loupbleu.oldVraiX = tempX;
+			}
+				  else {
+				printf_s("\nCette piece a ete prise par l'equipe rouge...\n");
+			}
 				break;
-			case 4: printf_s("\nLes coordonnees de C sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", chienbleu.x, chienbleu.y);
+			case 4: if (chienbleu.etat == 1) {
+				printf_s("\nLes coordonnees de C sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", chienbleu.x, chienbleu.y);
 				scanf_s("%i%i", &tempX, &tempY);
 				chienbleu.x = tempX;
 				chienbleu.y = tempY;
@@ -289,8 +305,13 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				plateau[tempY][tempX] = chienbleu.nom;
 				chienbleu.oldVraiY = tempY;
 				chienbleu.oldVraiX = tempX;
+			}
+				  else {
+				printf_s("\nCette piece a ete prise par l'equipe rouge...\n");
+			}
 				break;
-			case 5: printf_s("\nLes coordonnees de P sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", pantherebleu.x, pantherebleu.y);
+			case 5: if (pantherebleu.etat == 1) {
+				printf_s("\nLes coordonnees de P sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", pantherebleu.x, pantherebleu.y);
 				scanf_s("%i%i", &tempX, &tempY);
 				pantherebleu.x = tempX;
 				pantherebleu.y = tempY;
@@ -301,8 +322,13 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				plateau[tempY][tempX] = pantherebleu.nom;
 				pantherebleu.oldVraiY = tempY;
 				pantherebleu.oldVraiX = tempX;
+			}
+				  else {
+				printf_s("\nCette piece a ete prise par l'equipe rouge...\n");
+			}
 				break;
-			case 6: printf_s("\nLes coordonnees de T sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", tigrebleu.x, tigrebleu.y);
+			case 6: if (tigrebleu.etat == 1) {
+				printf_s("\nLes coordonnees de T sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", tigrebleu.x, tigrebleu.y);
 				scanf_s("%i%i", &tempX, &tempY);
 				tigrebleu.x = tempX;
 				tigrebleu.y = tempY;
@@ -313,8 +339,13 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				plateau[tempY][tempX] = tigrebleu.nom;
 				tigrebleu.oldVraiY = tempY;
 				tigrebleu.oldVraiX = tempX;
+			}
+				  else {
+				printf_s("\nCette piece a ete prise par l'equipe rouge...\n");
+			}
 				break;
-			case 7: printf_s("\nLes coordonnees de L sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", lionbleu.x, lionbleu.y);
+			case 7: if (lionbleu.etat == 1) {
+				printf_s("\nLes coordonnees de L sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", lionbleu.x, lionbleu.y);
 				scanf_s("%i%i", &tempX, &tempY);
 				lionbleu.x = tempX;
 				lionbleu.y = tempY;
@@ -325,8 +356,13 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				plateau[tempY][tempX] = lionbleu.nom;
 				lionbleu.oldVraiY = tempY;
 				lionbleu.oldVraiX = tempX;
+			}
+				  else {
+				printf_s("\nCette piece a ete prise par l'equipe rouge...\n");
+			}
 				break;
-			case 8: printf_s("\nLes coordonnees de E sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", elephantbleu.x, elephantbleu.y);
+			case 8: if (elephantbleu.etat == 1) {
+				printf_s("\nLes coordonnees de E sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", elephantbleu.x, elephantbleu.y);
 				scanf_s("%i%i", &tempX, &tempY);
 				elephantbleu.x = tempX;
 				elephantbleu.y = tempY;
@@ -337,6 +373,10 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				plateau[tempY][tempX] = elephantbleu.nom;
 				elephantbleu.oldVraiY = tempY;
 				elephantbleu.oldVraiX = tempX;
+			}
+				  else {
+				printf_s("\nCette piece a ete prise par l'equipe rouge...\n");
+			}
 				break;
 			default: printf_s("\nErreur de saisie\n");
 			}
@@ -349,7 +389,8 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				scanf_s("%i", &repPion);
 			} while (repPion < 1 || repPion > 8);
 			switch (repPion) {
-			case 1: printf_s("\nLes coordonnees de r sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", ratrouge.x, ratrouge.y);
+			case 1: if (ratrouge.etat == 1) {
+				printf_s("\nLes coordonnees de r sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", ratrouge.x, ratrouge.y);
 				scanf_s("%i%i", &tempX, &tempY);
 				ratrouge.x = tempX;
 				ratrouge.y = tempY;
@@ -360,8 +401,13 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				plateau[tempY][tempX] = ratrouge.nom;
 				ratrouge.oldVraiY = tempY;
 				ratrouge.oldVraiX = tempX;
+			}
+				  else {
+				printf_s("\nCette piece a ete prise par l'equipe rouge...\n");
+			}
 				break;
-			case 2: printf_s("\nLes coordonnees de h sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", chatrouge.x, chatrouge.y);
+			case 2: if (chatrouge.etat == 1) {
+				printf_s("\nLes coordonnees de h sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", chatrouge.x, chatrouge.y);
 				scanf_s("%i%i", &tempX, &tempY);
 				chatrouge.x = tempX;
 				chatrouge.y = tempY;
@@ -372,8 +418,13 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				plateau[tempY][tempX] = chatrouge.nom;
 				chatrouge.oldVraiY = tempY;
 				chatrouge.oldVraiX = tempX;
+			}
+				  else {
+				printf_s("\nCette piece a ete prise par l'equipe rouge...\n");
+			}
 				break;
-			case 3: printf_s("\nLes coordonnees de o sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", louprouge.x, louprouge.y);
+			case 3: if (louprouge.etat == 1) {
+				printf_s("\nLes coordonnees de o sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", louprouge.x, louprouge.y);
 				scanf_s("%i%i", &tempX, &tempY);
 				louprouge.x = tempX;
 				louprouge.y = tempY;
@@ -384,8 +435,13 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				plateau[tempY][tempX] = louprouge.nom;
 				louprouge.oldVraiY = tempY;
 				louprouge.oldVraiX = tempX;
+			}
+				  else {
+				printf_s("\nCette piece a ete prise par l'equipe rouge...\n");
+			}
 				break;
-			case 4: printf_s("\nLes coordonnees de c sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", chienrouge.x, chienrouge.y);
+			case 4: if (chienrouge.etat == 1) {
+				printf_s("\nLes coordonnees de c sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", chienrouge.x, chienrouge.y);
 				scanf_s("%i%i", &tempX, &tempY);
 				chienrouge.x = tempX;
 				chienrouge.y = tempY;
@@ -396,8 +452,13 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				plateau[tempY][tempX] = chienrouge.nom;
 				chienrouge.oldVraiY = tempY;
 				chienrouge.oldVraiX = tempX;
+			}
+				  else {
+				printf_s("\nCette piece a ete prise par l'equipe rouge...\n");
+			}
 				break;
-			case 5: printf_s("\nLes coordonnees de p sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", panthererouge.x, panthererouge.y);
+			case 5: if (panthererouge.etat == 1) {
+				printf_s("\nLes coordonnees de p sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", panthererouge.x, panthererouge.y);
 				scanf_s("%i%i", &tempX, &tempY);
 				panthererouge.x = tempX;
 				panthererouge.y = tempY;
@@ -408,8 +469,13 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				plateau[tempY][tempX] = panthererouge.nom;
 				panthererouge.oldVraiY = tempY;
 				panthererouge.oldVraiX = tempX;
+			}
+				  else {
+				printf_s("\nCette piece a ete prise par l'equipe rouge...\n");
+			}
 				break;
-			case 6: printf_s("\nLes coordonnees de t sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", tigrerouge.x, tigrerouge.y);
+			case 6: if (tigrerouge.etat == 1) {
+				printf_s("\nLes coordonnees de t sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", tigrerouge.x, tigrerouge.y);
 				scanf_s("%i%i", &tempX, &tempY);
 				tigrerouge.x = tempX;
 				tigrerouge.y = tempY;
@@ -420,8 +486,13 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				plateau[tempY][tempX] = tigrerouge.nom;
 				tigrerouge.oldVraiY = tempY;
 				tigrerouge.oldVraiX = tempX;
+			}
+				  else {
+				printf_s("\nCette piece a ete prise par l'equipe rouge...\n");
+			}
 				break;
-			case 7: printf_s("\nLes coordonnees de l sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", lionrouge.x, lionrouge.y);
+			case 7: if (lionrouge.etat == 1) {
+				printf_s("\nLes coordonnees de l sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", lionrouge.x, lionrouge.y);
 				scanf_s("%i%i", &tempX, &tempY);
 				lionrouge.x = tempX;
 				lionrouge.y = tempY;
@@ -432,8 +503,13 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				plateau[tempY][tempX] = lionrouge.nom;
 				lionrouge.oldVraiY = tempY;
 				lionrouge.oldVraiX = tempX;
+			}
+				  else {
+				printf_s("\nCette piece a ete prise par l'equipe rouge...\n");
+			}
 				break;
-			case 8: printf_s("\nLes coordonnees de e sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", elephantrouge.x, elephantrouge.y);
+			case 8: if (elephantrouge.etat == 1) {
+				printf_s("\nLes coordonnees de e sont (%i; %i)\nEntrez ses nouvelles coordonnees :\n", elephantrouge.x, elephantrouge.y);
 				scanf_s("%i%i", &tempX, &tempY);
 				elephantrouge.x = tempX;
 				elephantrouge.y = tempY;
@@ -444,6 +520,10 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				plateau[tempY][tempX] = elephantrouge.nom;
 				elephantrouge.oldVraiY = tempY;
 				elephantrouge.oldVraiX = tempX;
+			}
+				  else {
+				printf_s("\nCette piece a ete prise par l'equipe rouge...\n");
+			}
 				break;
 			default: printf_s("\nErreur de saisie\n");
 			}
