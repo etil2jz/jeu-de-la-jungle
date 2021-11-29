@@ -187,8 +187,54 @@ int initEquipes() {
 	return x;
 }
 
+int switchCoordX(int tempX) {
+	switch (tempX) {
+	case 1: tempX = 1;
+		break;
+	case 2: tempX = 3;
+		break;
+	case 3: tempX = 5;
+		break;
+	case 4: tempX = 7;
+		break;
+	case 5: tempX = 9;
+		break;
+	case 6: tempX = 11;
+		break;
+	case 7: tempX = 13;
+		break;
+	default: printf_s("\nErreur de saisie\n");
+	}
+	return tempX;
+}
+
+int switchCoordY(int tempY) {
+	switch (tempY) {
+	case 1: tempY = 17;
+		break;
+	case 2: tempY = 15;
+		break;
+	case 3: tempY = 13;
+		break;
+	case 4: tempY = 11;
+		break;
+	case 5: tempY = 9;
+		break;
+	case 6: tempY = 7;
+		break;
+	case 7: tempY = 5;
+		break;
+	case 8: tempY = 3;
+		break;
+	case 9: tempY = 1;
+		break;
+	default: printf_s("\nErreur de saisie\n");
+	}
+	return tempY;
+}
+
 void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat chatrouge, loup loupbleu, loup louprouge, chien chienbleu, chien chienrouge, panthere pantherebleu, panthere panthererouge, tigre tigrebleu, tigre tigrerouge, lion lionbleu, lion lionrouge, elephant elephantbleu, elephant elephantrouge) {
-	int alternerTours = 0, etatBleu = 1, etatRouge = 1, tempX = 0, tempY = 0, repPion/*x1 = 1, x2 = 3, x3 = 5, x4 = 7, x5 = 9, x6 = 11, x7 = 13, y1 = 17, y2 = 15, y3 = 13, y4 = 11, y5 = 9, y6 = 7, y7 = 5, y8 = 3, y9 = 1*/;
+	int alternerTours = 0, etatBleu = 1, etatRouge = 1, tempX = 0, tempY = 0, repPion;
 	do {
 		if ((alternerTours % 2) == 0) {
 			do {
@@ -200,47 +246,11 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				scanf_s("%i%i", &tempX, &tempY);
 				ratbleu.x = tempX;
 				ratbleu.y = tempY;
-				switch (tempX) {
-				case 1: tempX = 1;
-					break;
-				case 2: tempX = 3;
-					break;
-				case 3: tempX = 5;
-					break;
-				case 4: tempX = 7;
-					break;
-				case 5: tempX = 9;
-					break;
-				case 6: tempX = 11;
-					break;
-				case 7: tempX = 13;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
-				switch (tempY) {
-				case 1: tempY = 17;
-					break;
-				case 2: tempY = 15;
-					break;
-				case 3: tempY = 13;
-					break;
-				case 4: tempY = 11;
-					break;
-				case 5: tempY = 9;
-					break;
-				case 6: tempY = 7;
-					break;
-				case 7: tempY = 5;
-					break;
-				case 8: tempY = 3;
-					break;
-				case 9: tempY = 1;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
+				tempX = switchCoordX(tempX);
+				tempY = switchCoordY(tempY);
 				//printf_s("\n%i et %i", tempX, tempY); // test les valeurs
-				plateau[tempY][tempX] = ratbleu.nom;
 				plateau[ratbleu.oldVraiY][ratbleu.oldVraiX] = ' ';
+				plateau[tempY][tempX] = ratbleu.nom;
 				ratbleu.oldVraiY = tempY;
 				ratbleu.oldVraiX = tempX;
 				break;
@@ -248,47 +258,11 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				scanf_s("%i%i", &tempX, &tempY);
 				chatbleu.x = tempX;
 				chatbleu.y = tempY;
-				switch (tempX) {
-				case 1: tempX = 1;
-					break;
-				case 2: tempX = 3;
-					break;
-				case 3: tempX = 5;
-					break;
-				case 4: tempX = 7;
-					break;
-				case 5: tempX = 9;
-					break;
-				case 6: tempX = 11;
-					break;
-				case 7: tempX = 13;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
-				switch (tempY) {
-				case 1: tempY = 17;
-					break;
-				case 2: tempY = 15;
-					break;
-				case 3: tempY = 13;
-					break;
-				case 4: tempY = 11;
-					break;
-				case 5: tempY = 9;
-					break;
-				case 6: tempY = 7;
-					break;
-				case 7: tempY = 5;
-					break;
-				case 8: tempY = 3;
-					break;
-				case 9: tempY = 1;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
+				tempX = switchCoordX(tempX);
+				tempY = switchCoordY(tempY);
 				//printf_s("\n%i et %i", tempX, tempY); // test les valeurs
-				plateau[tempY][tempX] = chatbleu.nom;
 				plateau[chatbleu.oldVraiY][chatbleu.oldVraiX] = ' ';
+				plateau[tempY][tempX] = chatbleu.nom;
 				chatbleu.oldVraiY = tempY;
 				chatbleu.oldVraiX = tempX;
 				break;
@@ -296,47 +270,11 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				scanf_s("%i%i", &tempX, &tempY);
 				loupbleu.x = tempX;
 				loupbleu.y = tempY;
-				switch (tempX) {
-				case 1: tempX = 1;
-					break;
-				case 2: tempX = 3;
-					break;
-				case 3: tempX = 5;
-					break;
-				case 4: tempX = 7;
-					break;
-				case 5: tempX = 9;
-					break;
-				case 6: tempX = 11;
-					break;
-				case 7: tempX = 13;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
-				switch (tempY) {
-				case 1: tempY = 17;
-					break;
-				case 2: tempY = 15;
-					break;
-				case 3: tempY = 13;
-					break;
-				case 4: tempY = 11;
-					break;
-				case 5: tempY = 9;
-					break;
-				case 6: tempY = 7;
-					break;
-				case 7: tempY = 5;
-					break;
-				case 8: tempY = 3;
-					break;
-				case 9: tempY = 1;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
+				tempX = switchCoordX(tempX);
+				tempY = switchCoordY(tempY);
 				//printf_s("\n%i et %i", tempX, tempY); // test les valeurs
-				plateau[tempY][tempX] = loupbleu.nom;
 				plateau[loupbleu.oldVraiY][loupbleu.oldVraiX] = ' ';
+				plateau[tempY][tempX] = loupbleu.nom;
 				loupbleu.oldVraiY = tempY;
 				loupbleu.oldVraiX = tempX;
 				break;
@@ -344,47 +282,11 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				scanf_s("%i%i", &tempX, &tempY);
 				chienbleu.x = tempX;
 				chienbleu.y = tempY;
-				switch (tempX) {
-				case 1: tempX = 1;
-					break;
-				case 2: tempX = 3;
-					break;
-				case 3: tempX = 5;
-					break;
-				case 4: tempX = 7;
-					break;
-				case 5: tempX = 9;
-					break;
-				case 6: tempX = 11;
-					break;
-				case 7: tempX = 13;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
-				switch (tempY) {
-				case 1: tempY = 17;
-					break;
-				case 2: tempY = 15;
-					break;
-				case 3: tempY = 13;
-					break;
-				case 4: tempY = 11;
-					break;
-				case 5: tempY = 9;
-					break;
-				case 6: tempY = 7;
-					break;
-				case 7: tempY = 5;
-					break;
-				case 8: tempY = 3;
-					break;
-				case 9: tempY = 1;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
+				tempX = switchCoordX(tempX);
+				tempY = switchCoordY(tempY);
 				//printf_s("\n%i et %i", tempX, tempY); // test les valeurs
-				plateau[tempY][tempX] = chienbleu.nom;
 				plateau[chienbleu.oldVraiY][chienbleu.oldVraiX] = ' ';
+				plateau[tempY][tempX] = chienbleu.nom;
 				chienbleu.oldVraiY = tempY;
 				chienbleu.oldVraiX = tempX;
 				break;
@@ -392,47 +294,11 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				scanf_s("%i%i", &tempX, &tempY);
 				pantherebleu.x = tempX;
 				pantherebleu.y = tempY;
-				switch (tempX) {
-				case 1: tempX = 1;
-					break;
-				case 2: tempX = 3;
-					break;
-				case 3: tempX = 5;
-					break;
-				case 4: tempX = 7;
-					break;
-				case 5: tempX = 9;
-					break;
-				case 6: tempX = 11;
-					break;
-				case 7: tempX = 13;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
-				switch (tempY) {
-				case 1: tempY = 17;
-					break;
-				case 2: tempY = 15;
-					break;
-				case 3: tempY = 13;
-					break;
-				case 4: tempY = 11;
-					break;
-				case 5: tempY = 9;
-					break;
-				case 6: tempY = 7;
-					break;
-				case 7: tempY = 5;
-					break;
-				case 8: tempY = 3;
-					break;
-				case 9: tempY = 1;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
+				tempX = switchCoordX(tempX);
+				tempY = switchCoordY(tempY);
 				//printf_s("\n%i et %i", tempX, tempY); // test les valeurs
-				plateau[tempY][tempX] = pantherebleu.nom;
 				plateau[pantherebleu.oldVraiY][pantherebleu.oldVraiX] = ' ';
+				plateau[tempY][tempX] = pantherebleu.nom;
 				pantherebleu.oldVraiY = tempY;
 				pantherebleu.oldVraiX = tempX;
 				break;
@@ -440,47 +306,11 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				scanf_s("%i%i", &tempX, &tempY);
 				tigrebleu.x = tempX;
 				tigrebleu.y = tempY;
-				switch (tempX) {
-				case 1: tempX = 1;
-					break;
-				case 2: tempX = 3;
-					break;
-				case 3: tempX = 5;
-					break;
-				case 4: tempX = 7;
-					break;
-				case 5: tempX = 9;
-					break;
-				case 6: tempX = 11;
-					break;
-				case 7: tempX = 13;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
-				switch (tempY) {
-				case 1: tempY = 17;
-					break;
-				case 2: tempY = 15;
-					break;
-				case 3: tempY = 13;
-					break;
-				case 4: tempY = 11;
-					break;
-				case 5: tempY = 9;
-					break;
-				case 6: tempY = 7;
-					break;
-				case 7: tempY = 5;
-					break;
-				case 8: tempY = 3;
-					break;
-				case 9: tempY = 1;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
+				tempX = switchCoordX(tempX);
+				tempY = switchCoordY(tempY);
 				//printf_s("\n%i et %i", tempX, tempY); // test les valeurs
-				plateau[tempY][tempX] = tigrebleu.nom;
 				plateau[tigrebleu.oldVraiY][tigrebleu.oldVraiX] = ' ';
+				plateau[tempY][tempX] = tigrebleu.nom;
 				tigrebleu.oldVraiY = tempY;
 				tigrebleu.oldVraiX = tempX;
 				break;
@@ -488,47 +318,11 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				scanf_s("%i%i", &tempX, &tempY);
 				lionbleu.x = tempX;
 				lionbleu.y = tempY;
-				switch (tempX) {
-				case 1: tempX = 1;
-					break;
-				case 2: tempX = 3;
-					break;
-				case 3: tempX = 5;
-					break;
-				case 4: tempX = 7;
-					break;
-				case 5: tempX = 9;
-					break;
-				case 6: tempX = 11;
-					break;
-				case 7: tempX = 13;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
-				switch (tempY) {
-				case 1: tempY = 17;
-					break;
-				case 2: tempY = 15;
-					break;
-				case 3: tempY = 13;
-					break;
-				case 4: tempY = 11;
-					break;
-				case 5: tempY = 9;
-					break;
-				case 6: tempY = 7;
-					break;
-				case 7: tempY = 5;
-					break;
-				case 8: tempY = 3;
-					break;
-				case 9: tempY = 1;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
+				tempX = switchCoordX(tempX);
+				tempY = switchCoordY(tempY);
 				//printf_s("\n%i et %i", tempX, tempY); // test les valeurs
-				plateau[tempY][tempX] = lionbleu.nom;
 				plateau[lionbleu.oldVraiY][lionbleu.oldVraiX] = ' ';
+				plateau[tempY][tempX] = lionbleu.nom;
 				lionbleu.oldVraiY = tempY;
 				lionbleu.oldVraiX = tempX;
 				break;
@@ -536,47 +330,11 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				scanf_s("%i%i", &tempX, &tempY);
 				elephantbleu.x = tempX;
 				elephantbleu.y = tempY;
-				switch (tempX) {
-				case 1: tempX = 1;
-					break;
-				case 2: tempX = 3;
-					break;
-				case 3: tempX = 5;
-					break;
-				case 4: tempX = 7;
-					break;
-				case 5: tempX = 9;
-					break;
-				case 6: tempX = 11;
-					break;
-				case 7: tempX = 13;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
-				switch (tempY) {
-				case 1: tempY = 17;
-					break;
-				case 2: tempY = 15;
-					break;
-				case 3: tempY = 13;
-					break;
-				case 4: tempY = 11;
-					break;
-				case 5: tempY = 9;
-					break;
-				case 6: tempY = 7;
-					break;
-				case 7: tempY = 5;
-					break;
-				case 8: tempY = 3;
-					break;
-				case 9: tempY = 1;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
+				tempX = switchCoordX(tempX);
+				tempY = switchCoordY(tempY);
 				//printf_s("\n%i et %i", tempX, tempY); // test les valeurs
-				plateau[tempY][tempX] = elephantbleu.nom;
 				plateau[elephantbleu.oldVraiY][elephantbleu.oldVraiX] = ' ';
+				plateau[tempY][tempX] = elephantbleu.nom;
 				elephantbleu.oldVraiY = tempY;
 				elephantbleu.oldVraiX = tempX;
 				break;
@@ -595,47 +353,11 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				scanf_s("%i%i", &tempX, &tempY);
 				ratrouge.x = tempX;
 				ratrouge.y = tempY;
-				switch (tempX) {
-				case 1: tempX = 1;
-					break;
-				case 2: tempX = 3;
-					break;
-				case 3: tempX = 5;
-					break;
-				case 4: tempX = 7;
-					break;
-				case 5: tempX = 9;
-					break;
-				case 6: tempX = 11;
-					break;
-				case 7: tempX = 13;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
-				switch (tempY) {
-				case 1: tempY = 17;
-					break;
-				case 2: tempY = 15;
-					break;
-				case 3: tempY = 13;
-					break;
-				case 4: tempY = 11;
-					break;
-				case 5: tempY = 9;
-					break;
-				case 6: tempY = 7;
-					break;
-				case 7: tempY = 5;
-					break;
-				case 8: tempY = 3;
-					break;
-				case 9: tempY = 1;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
+				tempX = switchCoordX(tempX);
+				tempY = switchCoordY(tempY);
 				//printf_s("\n%i et %i", tempX, tempY); // test les valeurs
-				plateau[tempY][tempX] = ratrouge.nom;
 				plateau[ratrouge.oldVraiY][ratrouge.oldVraiX] = ' ';
+				plateau[tempY][tempX] = ratrouge.nom;
 				ratrouge.oldVraiY = tempY;
 				ratrouge.oldVraiX = tempX;
 				break;
@@ -643,47 +365,11 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				scanf_s("%i%i", &tempX, &tempY);
 				chatrouge.x = tempX;
 				chatrouge.y = tempY;
-				switch (tempX) {
-				case 1: tempX = 1;
-					break;
-				case 2: tempX = 3;
-					break;
-				case 3: tempX = 5;
-					break;
-				case 4: tempX = 7;
-					break;
-				case 5: tempX = 9;
-					break;
-				case 6: tempX = 11;
-					break;
-				case 7: tempX = 13;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
-				switch (tempY) {
-				case 1: tempY = 17;
-					break;
-				case 2: tempY = 15;
-					break;
-				case 3: tempY = 13;
-					break;
-				case 4: tempY = 11;
-					break;
-				case 5: tempY = 9;
-					break;
-				case 6: tempY = 7;
-					break;
-				case 7: tempY = 5;
-					break;
-				case 8: tempY = 3;
-					break;
-				case 9: tempY = 1;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
+				tempX = switchCoordX(tempX);
+				tempY = switchCoordY(tempY);
 				//printf_s("\n%i et %i", tempX, tempY); // test les valeurs
-				plateau[tempY][tempX] = chatrouge.nom;
 				plateau[chatrouge.oldVraiY][chatrouge.oldVraiX] = ' ';
+				plateau[tempY][tempX] = chatrouge.nom;
 				chatrouge.oldVraiY = tempY;
 				chatrouge.oldVraiX = tempX;
 				break;
@@ -691,47 +377,11 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				scanf_s("%i%i", &tempX, &tempY);
 				louprouge.x = tempX;
 				louprouge.y = tempY;
-				switch (tempX) {
-				case 1: tempX = 1;
-					break;
-				case 2: tempX = 3;
-					break;
-				case 3: tempX = 5;
-					break;
-				case 4: tempX = 7;
-					break;
-				case 5: tempX = 9;
-					break;
-				case 6: tempX = 11;
-					break;
-				case 7: tempX = 13;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
-				switch (tempY) {
-				case 1: tempY = 17;
-					break;
-				case 2: tempY = 15;
-					break;
-				case 3: tempY = 13;
-					break;
-				case 4: tempY = 11;
-					break;
-				case 5: tempY = 9;
-					break;
-				case 6: tempY = 7;
-					break;
-				case 7: tempY = 5;
-					break;
-				case 8: tempY = 3;
-					break;
-				case 9: tempY = 1;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
+				tempX = switchCoordX(tempX);
+				tempY = switchCoordY(tempY);
 				//printf_s("\n%i et %i", tempX, tempY); // test les valeurs
-				plateau[tempY][tempX] = louprouge.nom;
 				plateau[louprouge.oldVraiY][louprouge.oldVraiX] = ' ';
+				plateau[tempY][tempX] = louprouge.nom;
 				louprouge.oldVraiY = tempY;
 				louprouge.oldVraiX = tempX;
 				break;
@@ -739,47 +389,11 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				scanf_s("%i%i", &tempX, &tempY);
 				chienrouge.x = tempX;
 				chienrouge.y = tempY;
-				switch (tempX) {
-				case 1: tempX = 1;
-					break;
-				case 2: tempX = 3;
-					break;
-				case 3: tempX = 5;
-					break;
-				case 4: tempX = 7;
-					break;
-				case 5: tempX = 9;
-					break;
-				case 6: tempX = 11;
-					break;
-				case 7: tempX = 13;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
-				switch (tempY) {
-				case 1: tempY = 17;
-					break;
-				case 2: tempY = 15;
-					break;
-				case 3: tempY = 13;
-					break;
-				case 4: tempY = 11;
-					break;
-				case 5: tempY = 9;
-					break;
-				case 6: tempY = 7;
-					break;
-				case 7: tempY = 5;
-					break;
-				case 8: tempY = 3;
-					break;
-				case 9: tempY = 1;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
+				tempX = switchCoordX(tempX);
+				tempY = switchCoordY(tempY);
 				//printf_s("\n%i et %i", tempX, tempY); // test les valeurs
-				plateau[tempY][tempX] = chienrouge.nom;
 				plateau[chienrouge.oldVraiY][chienrouge.oldVraiX] = ' ';
+				plateau[tempY][tempX] = chienrouge.nom;
 				chienrouge.oldVraiY = tempY;
 				chienrouge.oldVraiX = tempX;
 				break;
@@ -787,47 +401,11 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				scanf_s("%i%i", &tempX, &tempY);
 				panthererouge.x = tempX;
 				panthererouge.y = tempY;
-				switch (tempX) {
-				case 1: tempX = 1;
-					break;
-				case 2: tempX = 3;
-					break;
-				case 3: tempX = 5;
-					break;
-				case 4: tempX = 7;
-					break;
-				case 5: tempX = 9;
-					break;
-				case 6: tempX = 11;
-					break;
-				case 7: tempX = 13;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
-				switch (tempY) {
-				case 1: tempY = 17;
-					break;
-				case 2: tempY = 15;
-					break;
-				case 3: tempY = 13;
-					break;
-				case 4: tempY = 11;
-					break;
-				case 5: tempY = 9;
-					break;
-				case 6: tempY = 7;
-					break;
-				case 7: tempY = 5;
-					break;
-				case 8: tempY = 3;
-					break;
-				case 9: tempY = 1;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
+				tempX = switchCoordX(tempX);
+				tempY = switchCoordY(tempY);
 				//printf_s("\n%i et %i", tempX, tempY); // test les valeurs
-				plateau[tempY][tempX] = panthererouge.nom;
 				plateau[panthererouge.oldVraiY][panthererouge.oldVraiX] = ' ';
+				plateau[tempY][tempX] = panthererouge.nom;
 				panthererouge.oldVraiY = tempY;
 				panthererouge.oldVraiX = tempX;
 				break;
@@ -835,47 +413,11 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				scanf_s("%i%i", &tempX, &tempY);
 				tigrerouge.x = tempX;
 				tigrerouge.y = tempY;
-				switch (tempX) {
-				case 1: tempX = 1;
-					break;
-				case 2: tempX = 3;
-					break;
-				case 3: tempX = 5;
-					break;
-				case 4: tempX = 7;
-					break;
-				case 5: tempX = 9;
-					break;
-				case 6: tempX = 11;
-					break;
-				case 7: tempX = 13;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
-				switch (tempY) {
-				case 1: tempY = 17;
-					break;
-				case 2: tempY = 15;
-					break;
-				case 3: tempY = 13;
-					break;
-				case 4: tempY = 11;
-					break;
-				case 5: tempY = 9;
-					break;
-				case 6: tempY = 7;
-					break;
-				case 7: tempY = 5;
-					break;
-				case 8: tempY = 3;
-					break;
-				case 9: tempY = 1;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
+				tempX = switchCoordX(tempX);
+				tempY = switchCoordY(tempY);
 				//printf_s("\n%i et %i", tempX, tempY); // test les valeurs
-				plateau[tempY][tempX] = tigrerouge.nom;
 				plateau[tigrerouge.oldVraiY][tigrerouge.oldVraiX] = ' ';
+				plateau[tempY][tempX] = tigrerouge.nom;
 				tigrerouge.oldVraiY = tempY;
 				tigrerouge.oldVraiX = tempX;
 				break;
@@ -883,47 +425,11 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				scanf_s("%i%i", &tempX, &tempY);
 				lionrouge.x = tempX;
 				lionrouge.y = tempY;
-				switch (tempX) {
-				case 1: tempX = 1;
-					break;
-				case 2: tempX = 3;
-					break;
-				case 3: tempX = 5;
-					break;
-				case 4: tempX = 7;
-					break;
-				case 5: tempX = 9;
-					break;
-				case 6: tempX = 11;
-					break;
-				case 7: tempX = 13;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
-				switch (tempY) {
-				case 1: tempY = 17;
-					break;
-				case 2: tempY = 15;
-					break;
-				case 3: tempY = 13;
-					break;
-				case 4: tempY = 11;
-					break;
-				case 5: tempY = 9;
-					break;
-				case 6: tempY = 7;
-					break;
-				case 7: tempY = 5;
-					break;
-				case 8: tempY = 3;
-					break;
-				case 9: tempY = 1;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
+				tempX = switchCoordX(tempX);
+				tempY = switchCoordY(tempY);
 				//printf_s("\n%i et %i", tempX, tempY); // test les valeurs
-				plateau[tempY][tempX] = lionrouge.nom;
 				plateau[lionrouge.oldVraiY][lionrouge.oldVraiX] = ' ';
+				plateau[tempY][tempX] = lionrouge.nom;
 				lionrouge.oldVraiY = tempY;
 				lionrouge.oldVraiX = tempX;
 				break;
@@ -931,47 +437,11 @@ void play(char plateau[][15], rat ratbleu, rat ratrouge, chat chatbleu, chat cha
 				scanf_s("%i%i", &tempX, &tempY);
 				elephantrouge.x = tempX;
 				elephantrouge.y = tempY;
-				switch (tempX) {
-				case 1: tempX = 1;
-					break;
-				case 2: tempX = 3;
-					break;
-				case 3: tempX = 5;
-					break;
-				case 4: tempX = 7;
-					break;
-				case 5: tempX = 9;
-					break;
-				case 6: tempX = 11;
-					break;
-				case 7: tempX = 13;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
-				switch (tempY) {
-				case 1: tempY = 17;
-					break;
-				case 2: tempY = 15;
-					break;
-				case 3: tempY = 13;
-					break;
-				case 4: tempY = 11;
-					break;
-				case 5: tempY = 9;
-					break;
-				case 6: tempY = 7;
-					break;
-				case 7: tempY = 5;
-					break;
-				case 8: tempY = 3;
-					break;
-				case 9: tempY = 1;
-					break;
-				default: printf_s("\nErreur de saisie\n");
-				}
+				tempX = switchCoordX(tempX);
+				tempY = switchCoordY(tempY);
 				//printf_s("\n%i et %i", tempX, tempY); // test les valeurs
-				plateau[tempY][tempX] = elephantrouge.nom;
 				plateau[elephantrouge.oldVraiY][elephantrouge.oldVraiX] = ' ';
+				plateau[tempY][tempX] = elephantrouge.nom;
 				elephantrouge.oldVraiY = tempY;
 				elephantrouge.oldVraiX = tempX;
 				break;
